@@ -55,6 +55,17 @@ class CsvView extends React.Component{
 					</thead>
 					{datas}
 				</table>
+				<Chart
+					chartType="Scatter"
+					width={1000}
+					height={1000}
+					data={[
+						Object.keys(this.state.json[0]),
+						...this.state.json.map(v => (
+							Object.values(v).map(v1 => parseFloat(v1))
+						))
+					]}
+					/ >
 			</div>
 		);
 	}
