@@ -1,0 +1,4 @@
+*.lock
+vendor/
+node_modules/
+.bundle/
